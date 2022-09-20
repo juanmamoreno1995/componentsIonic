@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">List - Reoder</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="enabledReorder()" color="primary">
+        Toogle
+      </ion-button>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]=disabled>
+
+      <ion-item *ngFor="let pers of personajes">
+        <ion-label>{{pers}}</ion-label>
+        <ion-reorder slot="end">
+          <ion-icon name="repeat-outline"></ion-icon>
+        </ion-reorder>
+      </ion-item>
+
+    </ion-reorder-group>
+
+  </ion-list>
+</ion-content>

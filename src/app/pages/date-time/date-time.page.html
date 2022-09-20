@@ -1,0 +1,16 @@
+<app-header titulo="Date Time"></app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Datos de Nacimiento</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-datetime [value]="fechaNaci.toISOString()" display-format="DD MMMM YYYY"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
